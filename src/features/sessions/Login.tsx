@@ -35,10 +35,10 @@ function Login() {
       return setErrors(["Please fill out all fields"])
     }
     const payload = {
-      email: emailRef?.current?.value,
-      password: passwordRef?.current?.value
+      email: emailRef?.current?.value || "",
+      password: passwordRef?.current?.value || ""
     }
-    const response = await dispatch<any>(loginUser(payload)).unwrap();
+    await dispatch<any>(loginUser(payload)).unwrap();
     if (errorMessages.length === 0) {
       navigate("/");
     } else {
