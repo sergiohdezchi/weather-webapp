@@ -1,9 +1,15 @@
-import React from 'react'
+import { Typography } from "@mui/material";
+import CityCards from "./CityCards";
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <section>
+      <Typography variant="h4" gutterBottom>
+        Dashboard
+      </Typography>
+      <CityCards />
+    </section>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
